@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Nova Lista</title>
+    <script type="text/javascript" src="code.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="cabeçalho">
+            <a href="index.html"><img src="./img/logo.png"></a>
+        </div>
+    </header>
+
+    <div class="all">
+        <div class="add-itens">
+            <h2>ADICIONAR ITEM</h2>
+            <input type="text" id="add-item" ><br>
+            <button class="bt-add-item" onclick="addItem()">ADICIONAR</button>
+        </div>
+
+        <div class="lista-itens">
+            <h2>ITENS DA LISTA:</h2>
+            <ul id="lista" class="lista"></ul>
+            <br><br>
+        </div>
+
+        <div class="salvar-lista">
+            <h2>NOME DA LISTA</h2>
+            <input type="text" id="nomeLista"><br>
+            <button class="bt-salvar-lista" onclick="salvarLista()">SALVAR LISTA</button>
+        </div>
+    </div>
+
+    <script>
+        var $lista = document.querySelector ('ul');
+        var $item = document.querySelector ('#add-item');
+        var $botao = document.querySelector ('#bt-add-item')
+
+        $item.addEventListener('keyup', function(e){
+            if (e.keyCode == 13) {
+                addItem()
+            }
+        })
+    </script>
+</body>
+
+
+</html>
+
+<style>
+    html {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        background-color: transparent;
+        color: black;
+    }
+    
+    body {
+        background: url(./img/fundo.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    .body {
+        text-align: center;
+        overflow-x: hidden;
+    }
+
+    .all {
+        text-align: center;
+    }
+
+    .lista {
+        list-style: none;
+        margin-left: 0;
+        padding: 0;
+        text-align: center;
+    }
+        
+
+    li {
+        list-style: none;
+        margin: 0 auto;
+        padding-left: 0;
+        width: 70%;
+    }
+
+    .bt-add-item {
+        padding: 4px 8px;
+        background-color: lightcoral;
+        color: #fff;
+        outline: none;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        margin: 5px;
+    }    
+    .bt-salvar-lista {
+        padding: 4px 8px;
+        background-color: lightcoral;
+        color: #fff;
+        outline: none;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        margin: 5px;
+    }
+
+    .cabeçalho {
+        padding: 10px 20px;
+        outline: none;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        margin: 5px;
+    }
+
+    .lista-itens {
+        text-align: center;
+    }
+</style>

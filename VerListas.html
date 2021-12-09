@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Nova Lista</title>
+    <script type="text/javascript" src="code.js"></script>
+</head>
+
+<body onload= MostrarLista()>
+    <header>
+        <div class="cabeçalho">
+            <a href="index.html"><img src="./img/logo.png"></a>
+        </div>
+    </header>
+    
+    <div class="conteudo" id="conteudo">        
+    </div>    
+</body>
+
+
+<style>
+    html {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        background-color: transparent;
+        color: black;
+    }
+
+    body {
+        background: url(./img/fundo.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    .listas-salvas {
+        width: 300px;
+        padding: 10px;
+        border: 2px solid lightcoral;
+        margin: 5px;
+    }
+
+    .conteudo {
+        display: flex;
+        margin: 0 auto;
+        align-items: center;
+        width: 95%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .botao-apagar {
+        padding: 4px 8px;
+        background-color: lightcoral;
+        color: #fff;
+        outline: none;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+</style>
